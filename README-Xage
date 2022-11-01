@@ -1,0 +1,6 @@
+This test version of Xage's branch of the https://github.com/FreeRDP/FreeRDP/tree/stable-2.0 repository was cloned on 11/1/22
+from that repository's "stable-2.0" branch.
+
+This branch is being developed for possible inclusion of the Xage RDP multi monitor project.
+
+Search this branch for the string "MULTIMON" to find changes from the original source branch.
