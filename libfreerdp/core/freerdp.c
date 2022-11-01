@@ -68,6 +68,9 @@
  *  @return TRUE if successful. FALSE otherwise.
  *
  */
+ /** MULTIMON
+  *  freerdp_connect() is called from the command line, and is also an API that is called from Guacamole.
+  */
 BOOL freerdp_connect(freerdp* instance)
 {
 	UINT status2 = CHANNEL_RC_OK;
@@ -658,6 +661,11 @@ BOOL freerdp_context_new(freerdp* instance)
 	return freerdp_context_new_ex(instance, NULL);
 }
 
+/** MULTIMON
+ *  When this is called from freerdp_context_new(), "settings" is null. So, the caller of freerdp_context_new()
+ *  that we are interested in (src/protocols/rdp/rdp.c - guac_rdp_handle_connection()) should call
+ *  freerdp_context_new_ex(), instead, with the correct "settings" filled in.
+ */
 BOOL freerdp_context_new_ex(freerdp* instance, rdpSettings* settings)
 {
 	rdpRdp* rdp;

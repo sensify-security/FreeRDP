@@ -1463,6 +1463,9 @@ static DWORD WINAPI xf_client_thread(LPVOID param)
 	instance = (freerdp*)param;
 	WINPR_ASSERT(instance);
 
+    /** MULTIMON
+     *  Calling freerdp_connect from a command-line thread.
+     */
 	status = freerdp_connect(instance);
 	context = instance->context;
 	WINPR_ASSERT(context);

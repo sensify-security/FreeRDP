@@ -336,7 +336,10 @@ extern "C"
 	 *  Some of its content need specific allocation/deallocation - see field description for
 	 * details.
 	 */
-	struct rdp_freerdp
+    /** MULTIMON
+     *  This is the freerdp struct definition that's passed to freerdp_connect().
+     */
+ 	struct rdp_freerdp
 	{
 		ALIGN64
 		rdpContext* context; /**< (offset 0)
